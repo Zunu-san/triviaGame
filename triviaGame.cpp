@@ -15,9 +15,8 @@ void findwinner(int n, int *points, int *winnerpoints, int *winner);
 
 int main()
 {
-    int NumPlay, NumRounds, NumQues;
+    int NumPlay, NumRounds, NumQues, newgame;
     bool gameflag = true;
-    char newgame;
     string questions[100][5] =
     {
         /*{"Carl and the Passions changed band name to what?",
@@ -170,17 +169,17 @@ int main()
         system("cls");
         game(NumPlay, NumRounds, NumQues, questions);
         cout << "Wanna play again? (Y/N): " << endl;
-        newgame = toupper(getch());
-        while (newgame != 'Y' && newgame != 'N')
+        newgame = getch();
+        while (newgame != 89 && newgame != 121 && newgame != 78 && newgame != 110)
         {
             cout << "Y or N, is not that hard to choose... Try again: ";
-            newgame = toupper(getch());
+            newgame = getch();
         }
-        if (newgame == 'Y')
+        if (newgame == 89 || newgame == 121)
         {
             cout << "So here we go again..." << endl;
         }
-        else if (newgame == 'N')
+        else if (newgame == 78 || new game == 110)
         {
             cout << "Please come back later :D" << endl;
             gameflag = false;
@@ -193,7 +192,7 @@ void game(int NumPlay, int NumRounds, int NumQues, string questions[100][5])
     int winners = 0;
     int winnerpoints = 0;
     int points[NumPlay];
-    char untie;
+    int untie;
     for (int i = 0; i < NumPlay; i++)
     {
         points[i] = 0;
@@ -223,13 +222,13 @@ void game(int NumPlay, int NumRounds, int NumQues, string questions[100][5])
             }
         }
         cout << "Wanna untie? (Y/N): " << endl;
-        untie = toupper(getch());
-        while (untie != 'Y' && untie != 'N')
+        untie = getch();
+        while (untie != 89 && untie != 121 && untie != 78 && untie != 110)
         {
             cout << "Press Y if you wanna untie, N if you don't want to, even a toddler could understand? Try again: ";
-            untie = toupper(getch());
+            untie = getch();
         }
-        if (untie == 'Y')
+        if (untie == 89 || untie == 121)
         {
             cout << "One round, one question each, let the games begin." << endl;
             game(winners, 1, 1, questions);
