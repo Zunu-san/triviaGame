@@ -246,6 +246,7 @@ void game(int NumPlay, int NumRounds, int NumQues, string questions[100][5])
             }
         }
     }
+    system("pause");
 }
 void swap(string *a, string *b)
 {
