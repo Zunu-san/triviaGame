@@ -179,7 +179,7 @@ int main()
         {
             cout << "So here we go again..." << endl;
         }
-        else if (newgame == 78 || new game == 110)
+        else if (newgame == 78 || newgame == 110)
         {
             cout << "Please come back later :D" << endl;
             gameflag = false;
