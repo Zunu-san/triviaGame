@@ -324,8 +324,9 @@ void question(int QuesNum, string (*questions)[5], int *points, int i, int j, in
 ENDTIMER:
     if(endtime)
     {
-        cout << "Answer: " << endl
-             << "Time ended" << endl;
+             cout << "Time ended" << endl
+                  << "The right answer was '" << cans << "'" << endl;
+
     }
     else if ((1 > ans || ans > 4) && !endtime)
     {
