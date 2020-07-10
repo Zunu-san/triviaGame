@@ -330,7 +330,8 @@ ENDTIMER:
     else if ((1 > ans || ans > 4) && !endtime)
     {
         cout << "Answer: " << endl
-             << "You wanted to know what happened if you pressed another number right? Well now you know." << endl;
+             << "You wanted to know what happened if you pressed another number right? Well now you know." << endl
+             << "By the way, the answer was '" << cans << "'" << endl;
     }
     else if (cans == *(*(questions + QuesNum) + n[ans - 1]))
     {
