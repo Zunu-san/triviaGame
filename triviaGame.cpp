@@ -145,25 +145,25 @@ int main()
     system("cls");
     while (gameflag)
     {
-        cout << "How many are going to play? (2-5): ";
+        cout << "How many are going to play? (2-5): " << endl;
         cin >> NumPlay;
         while (2 > NumPlay || NumPlay > 5)
         {
-            cout << "Please select the adecuate range, only 2 to 5 players. Try again: ";
+            cout << "Please select the adecuate range, only 2 to 5 players. Try again: " << endl;
             cin >> NumPlay;
         }
-        cout << "How many rounds do you want? (1-4): ";
+        cout << "How many rounds do you want? (1-4): " << endl;
         cin >> NumRounds;
         while (1 > NumRounds || NumRounds > 4)
         {
-            cout << "You can only choose between 1-4 rounds. Try again: ";
+            cout << "You can only choose between 1-4 rounds. Try again: " << endl;
             cin >> NumRounds;
         }
-        cout << "And how many questions per round? (1-5): ";
+        cout << "And how many questions per round? (1-5): " << endl;
         cin >> NumQues;
         while (1 > NumQues || NumQues > 5)
         {
-            cout << "Please, select from 1 to 5 questions. Try again: ";
+            cout << "Please, select from 1 to 5 questions. Try again: " << endl;
             cin >> NumQues;
         }
         system("cls");
@@ -172,7 +172,7 @@ int main()
         newgame = getch();
         while (newgame != 89 && newgame != 121 && newgame != 78 && newgame != 110)
         {
-            cout << "Y or N, is not that hard to choose... Try again: ";
+            cout << "Y or N, is not that hard to choose... Try again: " << endl;
             newgame = getch();
         }
         if (newgame == 89 || newgame == 121)
@@ -225,7 +225,7 @@ void game(int NumPlay, int NumRounds, int NumQues, string questions[100][5])
         untie = getch();
         while (untie != 89 && untie != 121 && untie != 78 && untie != 110)
         {
-            cout << "Press Y if you wanna untie, N if you don't want to, even a toddler could understand? Try again: ";
+            cout << "Press Y if you wanna untie, N if you don't want to, even a toddler could understand? Try again: " << endl;
             untie = getch();
         }
         if (untie == 89 || untie == 121)
@@ -236,7 +236,7 @@ void game(int NumPlay, int NumRounds, int NumQues, string questions[100][5])
     }
     else
     {
-        cout << "The smarty pants is... PLAYER ";
+        cout << "The smarty pants is... PLAYER " << endl;
         for (int i = 0; i < NumPlay; i++)
         {
             if (points[i] == winnerpoints)
